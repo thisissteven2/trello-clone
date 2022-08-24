@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Input from "./components/Input";
+import Boards from "./components/Boards";
+import { TaskProvider } from "./hooks/useTasks";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="overflow-y-scroll h-screen">
+			<div className="layout pt-8">
+				<div className="max-w-[26rem] mx-auto">
+					<TaskProvider>
+						<Input />
+						<Boards />
+					</TaskProvider>
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default App;

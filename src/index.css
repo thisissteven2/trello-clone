@@ -1,13 +1,37 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;1,400&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--color-bg: 203 213 225;
+	--color-primary: 0 0 0;
+	--color-done: 74 222 128;
+	--color-done-secondary: 149 226 183;
+	--color-ongoing: 96 165 250;
+	--color-ongoing-secondary: 160 198 244;
+	--color-undone: 148 163 184;
+	--color-undone-secondary: 186 197 211;
+	--color-board: 226 232 240;
+	--color-delete: 248 113 113;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+	body {
+		@apply bg-bg font-primary;
+	}
+
+	h1 {
+		@apply text-2xl font-bold;
+	}
+
+	p {
+		@apply text-sm;
+	}
+
+	.layout {
+		/* 1100px */
+		max-width: 68.75rem;
+		@apply mx-auto w-11/12;
+	}
 }
